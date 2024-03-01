@@ -7,9 +7,9 @@ from api import RecipeWrapper
 bp = Blueprint('pages', __name__)
 recipes = RecipeWrapper()
 
-@bp.context_processor
-def handle_context():
-    return dict(os = os)
+# @bp.context_processor
+# def handle_context():
+#     return dict(os = os)
 
 @bp.route("/search")
 def search():
