@@ -3,26 +3,35 @@
 <html>
 
     <head>
-        <title>{% if title is defined %}{title} - {% endif %}SD Kitchen</title>
+        <title>{% if title is defined %}{{title}} - {% endif %}SD Kitchen</title>
         <meta charset="utf-8">
         <meta name="description" content="{{ description }}">
         <meta name="author" content="Emily Evers">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{url_for('static', filename='template.css')}}">
+
+        {% if title is defined and os.path.exists("../static/styles/" + title + ".css")%}
+            <link rel="stylesheet" href="{{url_for('static', filename='styles/{{title}}.css')}}">
+        {% endif%}
+
         {% block head_extra %}{% endblock head_extra %}
     </head>
 
     <body>
         <header>
             <section class="header-container">
-                <h1>{% if title is defined %}{title}{% else %}SD Kitchen{% endif %}</h1>
+                <h1>SD Kitchen</h1>
                 <nav>
                     <a href="#"><p>Home</p></a>
-                    <a href="#"><p>Home</p></a>
+                    <a href="#"><p>Stock</p></a>
                 </nav>
             </section>
         </header>
-        <main></main>
+        <main>
+            <section class="main-container">
+                {% block main %}{% endblock %}
+            </section>
+        </main>
         <footer></footer>
     </body>
 </html>
