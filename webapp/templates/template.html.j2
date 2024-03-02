@@ -4,7 +4,7 @@
 
     <head>
         <title>{% if title is defined %}{{title}} - {% endif %}SD Kitchen</title>
-        
+
         <meta charset="utf-8">
         <meta name="description" content="{{ description }}">
         <meta name="author" content="Emily Evers">
@@ -15,6 +15,15 @@
     </head>
 
     <body>
+        <section class="user-header">
+            <section class="user-header-container">
+                <section class="user-actions">
+                    <a href="#">Login</a>
+                    <span class="list-seperator">|</span>
+                    <a href="#">Signup</a>
+                </section>
+            </section>
+        </section>
         <header>
             <section class="header-container">
                 <h1>SD Kitchen</h1>
@@ -24,6 +33,7 @@
                 </nav>
             </section>
         </header>
+
         <main>
             <section class="main-container">
                 {% block main %}{% endblock %}
