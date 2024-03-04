@@ -44,6 +44,11 @@ header {
     color: var(--colour-light);
 }
 
+h1 > a {
+    color: var(--colour-light);
+    text-decoration: none;
+}
+
 .user-header {
     display: flex;
     justify-content: center;
