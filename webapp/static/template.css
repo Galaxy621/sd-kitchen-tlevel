@@ -115,7 +115,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: calc(100vh - 12em);
+    min-height: calc(100vh - 14em);
 }
 
 .main-container {
