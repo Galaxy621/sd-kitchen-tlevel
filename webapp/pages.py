@@ -14,8 +14,12 @@ recipes = RecipeWrapper()
 @bp.route("/search")
 def search():
     meal_name = request.args.get("name")
-    if not meal_name: return make_response("<h1>400 Bad Request</h1>You must provide 'name'", 400)
-    return f"{recipes.search_by_name(meal_name)}"
+    if meal_name: return recipes.search_by_name(meal_name).as_dict()
+    
+    meal_id = request.args.get("id")
+    if meal_id: return recipes.get_by_id(meal_id).as_dict()
+
+    return make_response("<h1>400 Bad Request</h1>You must provide a valid argument (name, id)", 400)
 
 @bp.route("/")
 def index():
