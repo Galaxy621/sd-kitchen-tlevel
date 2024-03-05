@@ -1,0 +1,28 @@
+#search {
+    display: inline-block;
+    width: 25%;
+    /* padding: 4px; */
+    margin-bottom: 12px;
+    border: 1px solid hsla(0, 0%, 27%, 0.376);
+    border-radius: 4px;
+    height: 36px;
+}
+
+#search > input {
+    background-color: transparent;
+    display: inline;
+    margin: auto;
+    width: 79%;
+    height: 100%;
+    padding-left: 2%;
+}
+
+#search > button {
+    display: inline;
+    float: right;
+    height: 100%;
+    width: 36px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

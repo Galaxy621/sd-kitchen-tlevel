@@ -115,7 +115,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: calc(100vh - 14em);
+    min-height: calc(100vh - 14.25em);
 }
 
 .main-container {
@@ -135,15 +135,13 @@ main {
 }
 
 .main-container > section > h2 {
-    margin: 8px;
-    width: 100%;
+    padding-top: 8px;
 }
 
 .text-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin: 8px;
+    padding: 12px;
 }
 
 .text-container > p {
