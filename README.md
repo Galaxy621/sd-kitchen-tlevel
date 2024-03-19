@@ -1,4 +1,4 @@
-# T-Level Mock - SD-Kitchen
+# Programming Practice - Kitchen Website
 
 ## Installation & Running
 1. `py -m pip install -r requirements.txt`
